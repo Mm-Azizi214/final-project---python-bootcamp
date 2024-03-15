@@ -64,7 +64,7 @@ def update(request,criticism_id):
         form=Criticism_update_Form(request.POST,instance=criticism1)
         if form.is_valid():
             form.save()
-            return redirect("criticism" ,criticism_id)
+            return redirect("criticism_list")
     else:
         form= Criticism_update_Form(instance=criticism1)
     return render (request,"update.html",{"form":form})
