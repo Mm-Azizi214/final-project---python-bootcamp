@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+{%block content%}
+    <h2>criticisms list</h2><hr>
+    {%for criticisms in context %}
+    <a href="criticism/{{criticisms.id}}"><button type="button" class="btn btn-dark">{{criticisms.moive_name}}</button></a><br><br>
+    {%endfor%}
+    <hr>
+    <a href="{% url 'menu' %}"><button type="button" class="btn btn-danger">back</button></a><br></a>
+{%endblock%}

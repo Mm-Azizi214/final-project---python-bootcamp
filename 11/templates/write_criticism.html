@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>write your new criticism</h3><hr>
+<form method="post" action="" novalidate >{% csrf_token %}{{form.as_p}} <input type="submit" class="btn btn-primary" value="send"></form>
+
+{% endblock %}
